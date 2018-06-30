@@ -3,6 +3,11 @@
   <persistence-unit name="webpetPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>com.webpet.domain.Usuario</class>
+    <class>com.webpet.domain.Pais</class>
+    <class>com.webpet.domain.Estado</class>
+    <class>com.webpet.domain.Telefone</class>
+    <class>com.webpet.domain.PessoaFisica</class>
+    <class>com.webpet.domain.PessoaJuridica</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/webpet"/>
@@ -10,7 +15,7 @@
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
       <property name="javax.persistence.jdbc.password" value="senha10"/>
       <property name="hibernate.hbm2ddl.auto" value="update"/>
-      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>
       <!--    validate: validate the schema, makes no changes to the database.
             update: update the schema.
